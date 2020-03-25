@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "prataks"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "prataks"
+    spec:
+      containers:
+        - name: "prataks"
+          image: "pratakscontreg.azurecr.io/prataks"
+          ports:
+          - containerPort: 8000
